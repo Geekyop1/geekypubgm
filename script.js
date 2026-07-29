@@ -1,2 +1,2 @@
-let t=10;const c=document.getElementById('count');const url='https://chat.whatsapp.com/EVPZgZEYi3cFAZTRFxFfJ6';
+let t=5;const c=document.getElementById('count');const url='https://chat.whatsapp.com/EVPZgZEYi3cFAZTRFxFfJ6';
 const i=setInterval(()=>{t--;c.textContent=t;if(t<=0){clearInterval(i);location.href=url;}},1000);
