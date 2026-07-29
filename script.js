@@ -1,2 +1,29 @@
-let t=5;const c=document.getElementById('count');const url='https://chat.whatsapp.com/EVPZgZEYi3cFAZTRFxFfJ6';
-const i=setInterval(()=>{t--;c.textContent=t;if(t<=0){clearInterval(i);location.href=url;}},1000);
+const isTikTok = /tiktok/i.test(navigator.userAgent);
+
+const subtitle = document.querySelector(".subtitle");
+const tutorial = document.querySelector(".tutorial");
+const joinBtn = document.querySelector(".join");
+
+if (isTikTok) {
+
+    subtitle.innerHTML = "⚠️ TikTok Browser Detected";
+
+    joinBtn.innerHTML = "🟢 JOIN WHATSAPP GROUP";
+
+} else {
+
+    subtitle.innerHTML = "Open in your browser and join instantly";
+
+}
+
+joinBtn.addEventListener("click", function () {
+
+    joinBtn.style.transform = "scale(.96)";
+
+    setTimeout(() => {
+
+        joinBtn.style.transform = "scale(1)";
+
+    }, 150);
+
+});
